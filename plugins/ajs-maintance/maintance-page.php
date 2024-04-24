@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Página de Manutenção Personalizada
- * Description: Um plugin para adicionar uma página de manutenção personalizada ao seu site WordPress.
+ * Plugin Name: Site em Manutenção
+ * Description: Um plugin que cira uma página de manutenção personalizada e a torna a página principal do seu site WordPress.
  * Version: 1.0
- * Author: Seu Nome
+ * Author: Aislan James
  */
 
  function pm_create_maintance_page() {
