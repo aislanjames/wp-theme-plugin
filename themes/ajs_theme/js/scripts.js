@@ -1,54 +1,37 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
+jQuery(document).ready(function($) {
+    // Função para encolher a barra de navegação
+    function navbarShrink() {
+        const navbarCollapsible = $('#mainNav');
+        if (!navbarCollapsible.length) {
             return;
         }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+        if ($(window).scrollTop() === 0) {
+            navbarCollapsible.removeClass('navbar-shrink');
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.addClass('navbar-shrink');
         }
+    }
 
-    };
-
-    // Shrink the navbar 
+    // Encolher a barra de navegação
     navbarShrink();
 
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
+    // Encolher a barra de navegação quando a página é rolada
+    $(document).scroll(navbarShrink);
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
+    // Ativar Bootstrap scrollspy no elemento principal da navegação
+    const mainNav = $('#mainNav');
+    if (mainNav.length) {
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+            rootMargin: '0px 0px -40%'
         });
-    };
+    }
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+    // Fechar a barra de navegação responsiva quando o botão de alternância é visível
+    const navbarToggler = $('.navbar-toggler');
+    $('.nav-link').click(function() {
+        if (navbarToggler.is(':visible')) {
+            navbarToggler.click();
+        }
     });
-
 });

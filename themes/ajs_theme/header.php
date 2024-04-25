@@ -24,7 +24,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 </head>
-
+<script type="text/javascript">
+    console.log('<?php echo get_template_directory_uri() . "/js/scripts.js"; ?>');
+</script>
 <body id="page-top" <?php body_class(); ?>>
 	<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
 		<div class="container">

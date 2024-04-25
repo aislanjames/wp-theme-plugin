@@ -26,15 +26,15 @@
             <!-- Footer Social Icons-->
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Na Web</h4>
-                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-github"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/aislan-james"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/aislanjames"><i class="fab fa-fw fa-github"></i></a>
             </div>
             <!-- Footer About Text-->
             <div class="col-lg-4">
                 <h4 class="text-uppercase mb-4">Dedicatória</h4>
                 <p class="lead mb-0">
-                    Aos meu amor quando possível,
-                    <br>ao meus sobrinhos quando me esforço
+                    Ao meu amor quando possível,
+                    <br>aos meus sobrinhos quando me esforço
                     <br>e aos meus pais sempre!
                 </p>
             </div>

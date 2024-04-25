@@ -176,8 +176,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/*
+ * Minha customização no código.
+*/
 function my_theme_scripts() {
-    wp_enqueue_script('my-custom-script', array('jquery'), get_template_directory_uri() . '/js/scripts.js', '1.0.0', true);
+    wp_enqueue_script('my-custom-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+
 
