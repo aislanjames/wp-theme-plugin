@@ -176,22 +176,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/*
-* Meu código a partir daqui
-*/
-
-function my_theme_enqueue_styles() {
-    // Enqueue Bootstrap CSS
-    //wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/css/styles.css', array(), '1.0.0');
-
-    // Enqueue your theme's main stylesheet
-    wp_enqueue_style('theme-style', get_stylesheet_uri());
+function my_theme_scripts() {
+    wp_enqueue_script('my-custom-script', array('jquery'), get_template_directory_uri() . '/js/scripts.js', '1.0.0', true);
 }
+add_action('wp_enqueue_scripts', 'my_theme_scripts');
 
-function my_theme_enqueue_scripts() {
-    // Enqueue Bootstrap JavaScript
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
-}
-
-//add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
