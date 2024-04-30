@@ -25,8 +25,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 </head>
 <script type="text/javascript">
-    console.log('<?php echo get_template_directory_uri() . "/js/scripts.js"; ?>');
+	console.log('<?php echo get_template_directory_uri() . "/js/scripts.js"; ?>');
 </script>
+
 <body id="page-top" <?php body_class(); ?>>
 	<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
 		<div class="container">
@@ -47,7 +48,9 @@
 	<header class="masthead bg-primary text-white text-center">
 		<div class="container d-flex align-items-center flex-column">
 			<!-- Masthead Avatar Image-->
-			<img class="masthead-avatar mb-5" src="<?php echo get_template_directory_uri(); ?>/assets/img/avataaars.svg" alt="..." />
+			<div id="avatar" class="masthead-avatar mb-5">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/eu-cartoon.png" alt="Cartoon do Aislan" />
+			</div>
 			<!-- Masthead Heading-->
 			<h1 class="masthead-heading text-uppercase mb-0">FrontEnd Developer</h1>
 			<!-- Icon Divider-->

@@ -1,10 +1,14 @@
 jQuery(document).ready(function($) {
-    // Função para encolher a barra de navegação
+    console.log('Document ready!');
+
     function navbarShrink() {
         const navbarCollapsible = $('#mainNav');
+        console.log('Checking navbar:', navbarCollapsible);
         if (!navbarCollapsible.length) {
+            console.log('Navbar not found!');
             return;
         }
+        console.log('Navbar found, checking scroll position:', $(window).scrollTop());
         if ($(window).scrollTop() === 0) {
             navbarCollapsible.removeClass('navbar-shrink');
         } else {
@@ -12,26 +16,17 @@ jQuery(document).ready(function($) {
         }
     }
 
-    // Encolher a barra de navegação
     navbarShrink();
-
-    // Encolher a barra de navegação quando a página é rolada
     $(document).scroll(navbarShrink);
 
-    // Ativar Bootstrap scrollspy no elemento principal da navegação
     const mainNav = $('#mainNav');
     if (mainNav.length) {
+        console.log('Main nav found:', mainNav);
         new bootstrap.ScrollSpy(document.body, {
             target: '#mainNav',
             rootMargin: '0px 0px -40%'
         });
+    } else {
+        console.log('Main nav not found');
     }
-
-    // Fechar a barra de navegação responsiva quando o botão de alternância é visível
-    const navbarToggler = $('.navbar-toggler');
-    $('.nav-link').click(function() {
-        if (navbarToggler.is(':visible')) {
-            navbarToggler.click();
-        }
-    });
 });

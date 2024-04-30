@@ -11,3 +11,13 @@
 .custom-logo-link {
 	display: inline-block;
 }
+
+div#avatar {
+	
+	img {
+		border-radius: 125px;
+		object-fit: cover;
+		height: 250px;
+		border-radius:50%;
+		}
+}
